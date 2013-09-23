@@ -1,6 +1,6 @@
 evolution (3.8.2-1blankon2) suroboyo; urgency=low
 
-  * debian/control drop yelp
+  * debian/control drop yelp yel-tools
 
  -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Mon, 23 Sep 2013 00:33:54 +0700
 
