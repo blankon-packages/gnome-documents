@@ -1,3 +1,9 @@
+evolution (3.8.2-1blankon4) suroboyo; urgency=low
+
+  * debian/control recommends yelp
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Wed, 25 Sep 2013 10:12:14 +0700
+
 evolution (3.8.2-1blankon3) suroboyo; urgency=low
 
   * debian/control
