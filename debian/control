@@ -88,7 +88,7 @@ Depends: ${shlibs:Depends},
 Pre-Depends: debconf (>= 1.4.69) | debconf-2.0
 Recommends: evolution-plugins,
             evolution-webcal,
-            bogofilter | spamassassin
+            bogofilter | spamassassin,
             yelp
 Suggests: evolution-exchange,
           evolution-dbg,
