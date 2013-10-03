@@ -1,8 +1,7 @@
 Source: evolution
 Section: gnome
 Priority: optional
-Maintainer: BlankOn Developers <Blankon-dev@googlegroups.com>
-XSBC-Original-Maintainer: Debian Evolution Maintainers <pkg-evolution-maintainers@lists.alioth.debian.org>
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
 Uploaders: Jordi Mallach <jordi@debian.org>, 
            Margarita Manterola <debian@marga.com.ar>,
            Loic Minier <lool@dooz.org>,
@@ -10,11 +9,11 @@ Uploaders: Jordi Mallach <jordi@debian.org>,
            Oystein Gisnas <oystein@gisnas.net>,
            Pedro Fragoso <emberez@gmail.com>,
            Yves-Alexis Perez <corsac@debian.org>,
-           Josselin Mouette <joss@debian.org>
-Standards-Version: 3.9.3
-Dm-Upload-Allowed: yes
+           Josselin Mouette <joss@debian.org>,
+           Laurent Bigonville <bigon@debian.org>
+Standards-Version: 3.9.4
 Homepage: http://projects.gnome.org/evolution/
-Vcs-Svn: svn://anonscm.debian.org/svn/pkg-evolution/unstable/evolution
+Vcs-Svn: svn://anonscm.debian.org/pkg-evolution/unstable/evolution
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-evolution/unstable/evolution
 Build-Depends: debhelper (>= 9),
                cdbs (>= 0.4.90),
@@ -23,14 +22,14 @@ Build-Depends: debhelper (>= 9),
                libglib2.0-dev (>= 2.34),
                libgtk-3-dev (>= 3.4.0),
                libgail-3-dev (>= 3.0.2),
-               libebook1.2-dev (>= 3.8.2),
-               libecal1.2-dev (>= 3.8.2),
-               libedataserver1.2-dev (>= 3.8.2),
-               libebackend1.2-dev (>= 3.8.2),
-               libebook-contacts1.2-dev (>= 3.8.2),
-               libcamel1.2-dev (>= 3.8.2),
+               libebook1.2-dev (>= 3.8.5),
+               libecal1.2-dev (>= 3.8.5),
+               libedataserver1.2-dev (>= 3.8.5),
+               libebackend1.2-dev (>= 3.8.5),
+               libebook-contacts1.2-dev (>= 3.8.5),
+               libcamel1.2-dev (>= 3.8.5),
                evolution-data-server-dev (>= 3.8),
-               evolution-data-server-dev (<< 3.9),
+#              evolution-data-server-dev (<< 3.9),
                libgtkhtml-4.0-dev (>= 4.5.2),
                libgtkhtml-editor-4.0-dev,
                libwebkitgtk-3.0-dev (>= 1.10.0),
@@ -64,7 +63,6 @@ Build-Depends: debhelper (>= 9),
                libice-dev,
                libgstreamer1.0-dev,
                po-debconf,
-               rarian-compat,
                yelp-tools,
                gnome-pkg-tools,
                gsettings-desktop-schemas-dev (>= 2.91.92),
@@ -73,7 +71,8 @@ Build-Depends: debhelper (>= 9),
                libclutter-1.0-dev (>= 1.0.0),
                spamassassin,
                spamc,
-               bogofilter
+               bogofilter,
+               highlight
 
 Package: evolution
 Architecture: any
@@ -81,17 +80,15 @@ Depends: ${shlibs:Depends},
          ${misc:Depends},
          evolution-common (= ${source:Version}),
          evolution-data-server (>= 3.8),
-         evolution-data-server (<< 3.9),
+#        evolution-data-server-dev (<< 3.9),
          gnome-icon-theme (>= 2.30.2.1),
          dbus,
          psmisc
 Pre-Depends: debconf (>= 1.4.69) | debconf-2.0
 Recommends: evolution-plugins,
-            evolution-webcal,
-            bogofilter | spamassassin,
-            yelp
-Suggests: evolution-exchange,
-          evolution-dbg,
+            yelp,
+            bogofilter | spamassassin
+Suggests: evolution-ews,
           evolution-plugins-experimental,
           gnupg,
           network-manager
@@ -130,7 +127,6 @@ Package: libevolution
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends}
-Replaces: evolution (<< 2.29.1-1)
 Description: evolution libraries
  This package contains libraries used by evolution and the Anjal mail client.
 
@@ -198,22 +194,18 @@ Description: standard plugins for Evolution
  necessary for a functioning application.
  .
  The following standard plugins are included.
-  - bbdb
-  - save-calendar
-  - mail-to-task
-  - mailing-list-actions
-  - prefer-plain
-  - pst-import
-  - mail-notification
   - attachment-reminder
-  - backup-restore
+  - bbdb
+  - dbx-import
   - email-custom-header
   - face
+  - mailing-list-actions
+  - mail-notification
+  - mail-to-task
+  - prefer-plain
+  - pst-import
+  - save-calendar
   - templates
-  - vcard-inline
-  - dbx-import
-  - audio-inline
-  - image-inline
 
 Package: evolution-plugins-experimental
 Architecture: any
@@ -231,5 +223,4 @@ Description: experimental plugins for Evolution
  .
  The following plugins are included.
   - external-editor
-  - tnef-attachments
   - contacts-map

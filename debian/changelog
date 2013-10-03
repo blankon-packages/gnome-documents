@@ -1,28 +1,69 @@
-evolution (3.8.2-1blankon4) suroboyo; urgency=low
+evolution (3.10.0-0blankon2) suroboyo; urgency=low
 
-  * debian/control recommends yelp
+  * remove debian/control linux-any
+  * drop evolution-data-server (<< 3.9)
 
- -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Wed, 25 Sep 2013 10:12:14 +0700
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Thu, 03 Oct 2013 20:26:59 +0700
 
-evolution (3.8.2-1blankon3) suroboyo; urgency=low
+evolution (3.10.0-0blankon1) suroboyo; urgency=low
 
-  * debian/control
-    - Conflicts: yelp
+  * new upstream release
 
- -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Tue, 24 Sep 2013 10:55:52 +0700
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Thu, 03 Oct 2013 17:54:22 +0700
 
-evolution (3.8.2-1blankon2) suroboyo; urgency=low
+evolution (3.8.5-2) unstable; urgency=low
 
-  * debian/control 
-    - drop depends yelp
+  * Team upload.
 
- -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Mon, 23 Sep 2013 00:33:54 +0700
+  [ Michael Biebl ]
+  * Upload to unstable.
 
-evolution (3.8.2-1blankon1) suroboyo; urgency=low
+  [ Jeremy Bicha ]
+  * Don't recommend evolution-webcal, it's unmaintained
 
-  * Upload to suroboyo 
+  [ Michael Biebl ]
+  * Suggest evolution-ews instead of evolution-exchange, evolution-exchange is
+    dead upstream.
 
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 03 Aug 2013 11:19:02 +0700
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 17 Sep 2013 22:30:39 +0200
+
+evolution (3.8.5-1) experimental; urgency=low
+
+  * Team upload.
+
+  [ Laurent Bigonville ]
+  * debian/control: Refresh the list of installed plugins
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * Refresh 02_nss_paths.patch.
+  * Drop Suggests: evolution-dbg from evolution.
+  * Drop obsolete Replaces.
+  * Bump Build-Depends on e-d-s packages to 3.8.5.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 03 Sep 2013 00:44:33 +0200
+
+evolution (3.8.4-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release
+
+  [ Laurent Bigonville ]
+  * debian/control:
+    - Bump Standards-Version to 3.9.4 (no further changes)
+    - Drop obsolete Dm-Upload-Allowed field
+    - Use canonical URL for Vcs-Svn field
+    - Add myself to the Uploaders list
+  * debian/rules:
+    - Pass --as-needed to dh_autoreconf
+
+ -- Laurent Bigonville <bigon@debian.org>  Tue, 06 Aug 2013 00:02:42 +0200
+
+evolution (3.8.2-2) experimental; urgency=low
+
+  * debian/control: Add an explicit depend on highlight
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Mon, 03 Jun 2013 08:36:07 +0200
 
 evolution (3.8.2-1) experimental; urgency=low
 
@@ -115,6 +156,21 @@ evolution (3.6.0-1) experimental; urgency=low
     * debian/evolution-common.install: Update for new help install location
 
  -- Sjoerd Simons <sjoerd@debian.org>  Fri, 05 Oct 2012 23:51:00 +0200
+
+evolution (3.4.4-4) unstable; urgency=low
+
+  * Team upload.
+  * 11_hide_gnu_make_extension_warnings.patch: Hide gnu make extensions
+    warnings for automake 1.12. Patch cherry-picked from upstream Git.
+    Closes: #713316
+  * 12_automake_no_Werror.patch: Remove -Werror from AM_INIT_AUTOMAKE. Patch
+    cherry-picked from upstream Git.
+  * 13_support_both_old_and_new_buf_libxml2_APIs.patch: Support both old and
+    new-buf libxml2 APIs. libxml2 changed the API for xmlOutputBuffer
+    incompatibly. Patch backported from upstream Git.
+  * Drop obsolete Dm-Upload-Allowed field.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 11 Aug 2013 19:36:06 +0200
 
 evolution (3.4.4-3) unstable; urgency=low
 

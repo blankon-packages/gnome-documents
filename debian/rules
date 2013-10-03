@@ -11,10 +11,12 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-version.mk
 
 ELIBDIR := usr/lib/evolution/3.8
 
+DEB_DH_AUTORECONF_ARGS := --as-needed
 DEB_SHLIBDEPS_INCLUDE := debian/evolution/$(ELIBDIR)
 DEB_DH_MAKESHLIBS_ARGS_libevolution += -V'libevolution (>= $(DEB_GNOME_VERSION)), libevolution (<< $(DEB_GNOME_NEXTVERSION))' --noscripts -X $(ELIBDIR)/modules
 DEB_DH_MAKESHLIBS_ARGS_evolution += -V
 DEB_DH_MAKESHLIBS_ARGS_ALL += --noscripts -X $(ELIBDIR)/plugins
+DEB_DH_INSTALL_ARGS := --fail-missing -X.la
 
 export DEB_LDFLAGS_MAINT_APPEND=-Wl,-z,defs -Wl,--as-needed -Wl,-O1
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all
