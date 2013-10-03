@@ -6,10 +6,8 @@ Bug-GNOME: https://bugzilla.gnome.org/show_bug.cgi?id=591436
 Forwarded: no
 
 ---
-Index: evolution-3.8.4/addressbook/gui/contact-editor/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/addressbook/gui/contact-editor/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/addressbook/gui/contact-editor/Makefile.am	2013-07-25 13:37:06.305874054 -0400
+--- a/addressbook/gui/contact-editor/Makefile.am
++++ b/addressbook/gui/contact-editor/Makefile.am
 @@ -23,7 +23,7 @@
  	e-contact-quick-add.c			\
  	e-contact-quick-add.h
@@ -18,11 +16,9 @@ Index: evolution-3.8.4/addressbook/gui/contact-editor/Makefile.am
 +libecontacteditor_la_LDFLAGS =  $(NO_UNDEFINED)
  
  libecontacteditor_la_LIBADD =						\
- 	$(top_builddir)/e-util/libeutil.la				\
-Index: evolution-3.8.4/addressbook/gui/contact-list-editor/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/addressbook/gui/contact-list-editor/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/addressbook/gui/contact-list-editor/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+ 	$(top_builddir)/e-util/libevolution-util.la			\
+--- a/addressbook/gui/contact-list-editor/Makefile.am
++++ b/addressbook/gui/contact-list-editor/Makefile.am
 @@ -19,7 +19,7 @@
  	e-contact-list-model.c			\
  	e-contact-list-model.h
@@ -32,10 +28,8 @@ Index: evolution-3.8.4/addressbook/gui/contact-list-editor/Makefile.am
  
  libecontactlisteditor_la_LIBADD =				\
  	$(top_builddir)/addressbook/util/libeabutil.la		\
-Index: evolution-3.8.4/addressbook/importers/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/addressbook/importers/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/addressbook/importers/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+--- a/addressbook/importers/Makefile.am
++++ b/addressbook/importers/Makefile.am
 @@ -18,7 +18,7 @@
  	evolution-csv-importer.c	        \
  	evolution-addressbook-importers.h
@@ -44,11 +38,9 @@ Index: evolution-3.8.4/addressbook/importers/Makefile.am
 +libevolution_addressbook_importers_la_LDFLAGS =  $(NO_UNDEFINED)
  
  libevolution_addressbook_importers_la_LIBADD = \
- 	$(top_builddir)/e-util/libeutil.la 				\
-Index: evolution-3.8.4/addressbook/util/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/addressbook/util/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/addressbook/util/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+ 	$(top_builddir)/e-util/libevolution-util.la 			\
+--- a/addressbook/util/Makefile.am
++++ b/addressbook/util/Makefile.am
 @@ -19,7 +19,7 @@
  	eab-book-util.c					\
  	eab-book-util.h
@@ -57,12 +49,10 @@ Index: evolution-3.8.4/addressbook/util/Makefile.am
 +libeabutil_la_LDFLAGS =  $(NO_UNDEFINED)
  
  libeabutil_la_LIBADD =					\
- 	$(top_builddir)/e-util/libeutil.la		\
-Index: evolution-3.8.4/calendar/gui/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/calendar/gui/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/calendar/gui/Makefile.am	2013-07-25 13:37:06.309874054 -0400
-@@ -212,7 +212,7 @@
+ 	$(top_builddir)/e-util/libevolution-util.la	\
+--- a/calendar/gui/Makefile.am
++++ b/calendar/gui/Makefile.am
+@@ -209,7 +209,7 @@
  	$(GTKHTML_LIBS)							\
  	$(LIBSOUP_LIBS)
  
@@ -71,10 +61,8 @@ Index: evolution-3.8.4/calendar/gui/Makefile.am
  
  EXTRA_DIST =	 			\
  	$(ui_DATA)			\
-Index: evolution-3.8.4/calendar/importers/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/calendar/importers/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/calendar/importers/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+--- a/calendar/importers/Makefile.am
++++ b/calendar/importers/Makefile.am
 @@ -15,7 +15,7 @@
  	evolution-calendar-importer.h	     \
  	icalendar-importer.c
@@ -83,50 +71,42 @@ Index: evolution-3.8.4/calendar/importers/Makefile.am
 +libevolution_calendar_importers_la_LDFLAGS =  $(NO_UNDEFINED)
  
  libevolution_calendar_importers_la_LIBADD =			\
- 	$(top_builddir)/e-util/libeutil.la 			\
-Index: evolution-3.8.4/composer/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/composer/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/composer/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+ 	$(top_builddir)/e-util/libevolution-util.la		\
+--- a/composer/Makefile.am
++++ b/composer/Makefile.am
 @@ -52,7 +52,7 @@
  	e-composer-text-header.c		\
  	e-msg-composer.c
  
--libcomposer_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libcomposer_la_LDFLAGS =  $(NO_UNDEFINED)
+-libevolution_mail_composer_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_mail_composer_la_LDFLAGS = $(NO_UNDEFINED)
  
- libcomposer_la_LIBADD =					\
- 	$(top_builddir)/e-util/libeutil.la		\
-Index: evolution-3.8.4/e-util/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/e-util/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/e-util/Makefile.am	2013-07-25 13:37:06.309874054 -0400
-@@ -588,7 +588,7 @@
+ libevolution_mail_composer_la_LIBADD =			\
+ 	$(top_builddir)/e-util/libevolution-util.la	\
+--- a/e-util/Makefile.am
++++ b/e-util/Makefile.am
+@@ -565,7 +565,7 @@
  	$(PLATFORM_SOURCES) \
  	$(NULL)
  
--libeutil_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libeutil_la_LDFLAGS =  $(NO_UNDEFINED)
+-libevolution_util_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_util_la_LDFLAGS = $(NO_UNDEFINED)
  
- libeutil_la_LIBADD =  \
+ libevolution_util_la_LIBADD =  \
  	$(top_builddir)/libgnomecanvas/libgnomecanvas.la \
-Index: evolution-3.8.4/em-format/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/em-format/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/em-format/Makefile.am	2013-07-25 13:37:06.309874054 -0400
-@@ -115,7 +115,7 @@
+--- a/em-format/Makefile.am
++++ b/em-format/Makefile.am
+@@ -120,7 +120,7 @@
  	e-mail-stripsig-filter.c			\
  	$(SMIME_EXTENSIONS)
  
--libemformat_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libemformat_la_LDFLAGS =  $(NO_UNDEFINED)
+-libevolution_mail_formatter_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_mail_formatter_la_LDFLAGS = $(NO_UNDEFINED)
  
  if ENABLE_SMIME
  SMIME_LIBS =						\
-Index: evolution-3.8.4/libemail-engine/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/libemail-engine/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/libemail-engine/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+--- a/libemail-engine/Makefile.am
++++ b/libemail-engine/Makefile.am
 @@ -81,7 +81,7 @@
  	$(GTKHTML_LIBS) \
  	$(NULL)
@@ -136,10 +116,8 @@ Index: evolution-3.8.4/libemail-engine/Makefile.am
  
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = libemail-engine.pc
-Index: evolution-3.8.4/libgnomecanvas/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/libgnomecanvas/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/libgnomecanvas/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+--- a/libgnomecanvas/Makefile.am
++++ b/libgnomecanvas/Makefile.am
 @@ -53,7 +53,7 @@
  	$(GNOME_PLATFORM_LIBS) \
  	$(MATH_LIB)
@@ -149,10 +127,8 @@ Index: evolution-3.8.4/libgnomecanvas/Makefile.am
  
  BUILT_SOURCES = $(MARSHAL_GENERATED)
  
-Index: evolution-3.8.4/mail/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/mail/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/mail/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+--- a/mail/Makefile.am
++++ b/mail/Makefile.am
 @@ -206,7 +206,7 @@
  	$(LIBSOUP_LIBS)					\
  	-lresolv
@@ -162,10 +138,8 @@ Index: evolution-3.8.4/mail/Makefile.am
  
  libevolution_mail_la_DEPENDENCIES = em-filter-i18n.h
  
-Index: evolution-3.8.4/mail/importers/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/mail/importers/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/mail/importers/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+--- a/mail/importers/Makefile.am
++++ b/mail/importers/Makefile.am
 @@ -18,7 +18,7 @@
  	pine-importer.c				\
  	evolution-mbox-importer.c
@@ -174,24 +148,20 @@ Index: evolution-3.8.4/mail/importers/Makefile.am
 +libevolution_mail_importers_la_LDFLAGS =  $(NO_UNDEFINED)
  
  libevolution_mail_importers_la_LIBADD =				\
- 	$(top_builddir)/e-util/libeutil.la			\
-Index: evolution-3.8.4/shell/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/shell/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/shell/Makefile.am	2013-07-25 13:37:06.309874054 -0400
-@@ -89,7 +89,7 @@
+ 	$(top_builddir)/e-util/libevolution-util.la		\
+--- a/shell/Makefile.am
++++ b/shell/Makefile.am
+@@ -85,7 +85,7 @@
  	evo-version.h				\
- 	es-event.c
+ 	$(NULL)
  
--libeshell_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
-+libeshell_la_LDFLAGS =  $(NO_UNDEFINED)
+-libevolution_shell_la_LDFLAGS = -avoid-version $(NO_UNDEFINED)
++libevolution_shell_la_LDFLAGS = $(NO_UNDEFINED)
  
- libeshell_la_LIBADD =					\
- 	$(top_builddir)/e-util/libeutil.la		\
-Index: evolution-3.8.4/smime/gui/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/smime/gui/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/smime/gui/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+ libevolution_shell_la_LIBADD =				\
+ 	$(top_builddir)/e-util/libevolution-util.la	\
+--- a/smime/gui/Makefile.am
++++ b/smime/gui/Makefile.am
 @@ -44,7 +44,7 @@
  	$(GTKHTML_LIBS)					\
  	$(CERT_UI_LIBS)
@@ -201,10 +171,8 @@ Index: evolution-3.8.4/smime/gui/Makefile.am
  
  ui_DATA = smime-ui.ui
  
-Index: evolution-3.8.4/smime/lib/Makefile.am
-===================================================================
---- evolution-3.8.4.orig/smime/lib/Makefile.am	2013-07-25 13:37:06.313874054 -0400
-+++ evolution-3.8.4/smime/lib/Makefile.am	2013-07-25 13:37:06.309874054 -0400
+--- a/smime/lib/Makefile.am
++++ b/smime/lib/Makefile.am
 @@ -36,6 +36,6 @@
  	$(GTKHTML_LIBS)				\
  	$(CERT_UI_LIBS)

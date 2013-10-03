@@ -1,0 +1,1672 @@
+Description: Translate the U1 email
+Forwarded: not-needed
+
+=== modified file 'configure.ac'
+---
+ configure.ac                   |   16 ++++++++++++
+ mail/default/Makefile.am       |    2 -
+ mail/default/af/Inbox          |   42 +++++++++++++++++++++++++++++++++
+ mail/default/af/Makefile.am    |    8 ++++++
+ mail/default/ast/Inbox         |   42 +++++++++++++++++++++++++++++++++
+ mail/default/ast/Makefile.am   |    8 ++++++
+ mail/default/bg/Inbox          |   38 ++++++++++++++++++++++++++++++
+ mail/default/bg/Makefile.am    |    8 ++++++
+ mail/default/ca/Inbox          |   51 +++++++++++++++++++++++++++++++++++++++++
+ mail/default/cy/Inbox          |   40 ++++++++++++++++++++++++++++++++
+ mail/default/cy/Makefile.am    |    8 ++++++
+ mail/default/de/Inbox          |   50 ++++++++++++++++++++++++++++++++++++++++
+ mail/default/es/Inbox          |   45 ++++++++++++++++++++++++++++++++++++
+ mail/default/fi/Inbox          |   49 +++++++++++++++++++++++++++++++++++++++
+ mail/default/fr/Inbox          |   41 ++++++++++++++++++++++++++++++++
+ mail/default/gl/Inbox          |   45 ++++++++++++++++++++++++++++++++++++
+ mail/default/gl/Makefile.am    |    8 ++++++
+ mail/default/gu/Inbox          |   40 ++++++++++++++++++++++++++++++++
+ mail/default/gu/Makefile.am    |    8 ++++++
+ mail/default/he/Inbox          |   39 +++++++++++++++++++++++++++++++
+ mail/default/he/Makefile.am    |    8 ++++++
+ mail/default/hr/Inbox          |   45 ++++++++++++++++++++++++++++++++++++
+ mail/default/hr/Makefile.am    |    8 ++++++
+ mail/default/hu/Inbox          |   39 +++++++++++++++++++++++++++++++
+ mail/default/id/Inbox          |   46 ++++++++++++++++++++++++++++++++++++
+ mail/default/it/Inbox          |   48 ++++++++++++++++++++++++++++++++++++++
+ mail/default/ja/Inbox          |   45 ++++++++++++++++++++++++++++++++++++
+ mail/default/nb/Inbox          |   43 ++++++++++++++++++++++++++++++++++
+ mail/default/nb/Makefile.am    |    8 ++++++
+ mail/default/nl/Inbox          |   50 ++++++++++++++++++++++++++++++++++++++++
+ mail/default/pt_BR/Inbox       |   40 ++++++++++++++++++++++++++++++++
+ mail/default/pt_BR/Makefile.am |    8 ++++++
+ mail/default/pt_PT/Inbox       |   32 +++++++++++++++++++++++++
+ mail/default/pt_PT/Makefile.am |    8 ++++++
+ mail/default/ru/Inbox          |   32 +++++++++++++++++++++++++
+ mail/default/ru/Makefile.am    |    8 ++++++
+ mail/default/sk/Inbox          |   37 +++++++++++++++++++++++++++++
+ mail/default/sk/Makefile.am    |    8 ++++++
+ mail/default/sl/Inbox          |   31 ++++++++++++++++++++++++
+ mail/default/sl/Makefile.am    |    8 ++++++
+ mail/default/sv/Inbox          |   47 +++++++++++++++++++++++++++++++++++++
+ mail/default/ug/Inbox          |   35 ++++++++++++++++++++++++++++
+ mail/default/ug/Makefile.am    |    8 ++++++
+ mail/default/zh_CN/Inbox       |   46 ++++++++++++++++++++++++++++++++++++
+ mail/default/zh_TW/Inbox       |   38 ++++++++++++++++++++++++++++++
+ mail/default/zh_TW/Makefile.am |    8 ++++++
+ 46 files changed, 1321 insertions(+), 1 deletion(-)
+
+Index: b/configure.ac
+===================================================================
+--- a/configure.ac
++++ b/configure.ac
+@@ -1611,12 +1611,20 @@
+ mail/Makefile
+ mail/default/Makefile
+ mail/default/C/Makefile
++mail/default/af/Makefile
++mail/default/ast/Makefile
++mail/default/bg/Makefile
+ mail/default/ca/Makefile
+ mail/default/cs/Makefile
++mail/default/cy/Makefile
+ mail/default/de/Makefile
+ mail/default/es/Makefile
+ mail/default/fi/Makefile
+ mail/default/fr/Makefile
++mail/default/gl/Makefile
++mail/default/gu/Makefile
++mail/default/he/Makefile
++mail/default/hr/Makefile
+ mail/default/hu/Makefile
+ mail/default/id/Makefile
+ mail/default/it/Makefile
+@@ -1624,14 +1632,22 @@
+ mail/default/ko/Makefile
+ mail/default/lt/Makefile
+ mail/default/mk/Makefile
++mail/default/nb/Makefile
+ mail/default/nl/Makefile
+ mail/default/pl/Makefile
+ mail/default/pt/Makefile
++mail/default/pt_BR/Makefile
++mail/default/pt_PT/Makefile
+ mail/default/ro/Makefile
++mail/default/ru/Makefile
++mail/default/sk/Makefile
++mail/default/sl/Makefile
+ mail/default/sr/Makefile
+ mail/default/sr@latin/Makefile
+ mail/default/sv/Makefile
++mail/default/ug/Makefile
+ mail/default/zh_CN/Makefile
++mail/default/zh_TW/Makefile
+ mail/importers/Makefile
+ maint/Makefile
+ modules/Makefile
+Index: b/mail/default/af/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/af/Inbox
+@@ -0,0 +1,42 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Die 'Ubuntu One' Span <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Hou jou digitale lewe netjies met 'Ubuntu One'!
++
++
++Nie alleenlik sal jou dokumente, fotos, musiek, en notas gesinkroniseered 
++oor al jou kompers bly nie, maar met jou persoonlike digitale wolk sal al
++jou 'Evolution' kontakte ook.
++
++Leer meer omtrent 'Ubuntu One' by http://one.ubuntu.com/.
++
++
++Het jy alreeds 'n 'Ubuntu One' rekening? Voeg jou komper by jou rekening
++deur die 'Ubuntu One' beheer paneel.
++
++Al jou kontakte in jou 'Ubuntu One' adres boek is outomaties gesinkroniseered 
++met jou persoonlike wolk. Kyk en modifiseer kontak informasie gerieflik in 
++'Evolution' of die 'Ubuntu One' webwerf. 'Ubuntu One' sal selfs jou 'Evoution' 
++kontakte gesinkroniseered hou met jou mobiele foon.
++
++
++Vir informasie omtrent kopieering of beweeging van jou kontakte binne-in die 
++'Ubuntu One' adres boek, hersien ons aanlyn studieklasse en 'faqs'.
++
++https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++Benodig jy hulp of het jy 'n 'bug' gevind? Hersien die 'Ubuntu One' ondersteuning opsies.
++
++https://one.ubuntu.com/support/
++
++Baie Dankie.
++
++Die 'Ubuntu One' span.
++http://one.ubuntu.com/
+Index: b/mail/default/af/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/af/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/af/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/ast/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/ast/Inbox
+@@ -0,0 +1,42 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: L'equipu d'Ubuntu One Team <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Compaxina la to vida dixital con Ubuntu One.
++
++Evolution ye meyor con Ubuntu One - la ñube personal pa la to vida
++dixital.
++
++Ubuntu One fai más que sincronizar los tos ficheros - si necesites acceder
++a tos tos contautos, notes o marcadores dende cualesquier equipu o la web, esfrutar
++de la to música favorita dende una tienda integrada na ñube o esparder tola
++coleición d'iPhone y Android - tamos acabante xubir el llistón de les
++ñubes personales. Tienes más información en http://one.ubuntu.com/.
++        
++¿Tienes yá una cuenta de Ubuntu One? 
++Amiesta'l to equipu a la to cuenta, llanzando'l panel de control d'Ubuntu One. 
++        
++        Tolos contautos de la llibreta de direiciones d'«Ubuntu One» sincronícense
++automáticamente cola to ñube personal. Puedes ver y camudar la información de
++contautos n'Evolution o'l sitiu web d'Ubuntu One. Ubuntu One va caltener siempres los
++tos contautos d'Evolution sincronizaos col to teléfonu móvil.
++        
++        Pa tener información tocante a copiar o mover los tos contautos a la
++llibreta de direiciones d'Ubuntu One, revisa los nuesos tutoriales en llinia y les
++entrugues más frecuentes (n'inglés).
++
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++¿Necesites aida o atopasti dalgún fallu? Revisa les opciones de sofitu d'Ubuntu One.
++https://one.ubuntu.com/support/
++        
++Gracies.
++
++L'equipu d'Ubuntu One
++http://one.ubuntu.com/ 
+Index: b/mail/default/ast/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/ast/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/ast/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/bg/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/bg/Inbox
+@@ -0,0 +1,38 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: The Ubuntu One Team <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Дръжте цифровия си живот организиран с Ubuntu One!
++
++Не само вашите документи, снимки, музика и бележки ще бъдат синхронизирани
++с всичките ви компютри и вашия личен облак, но също така и всички ваши 
++Evolution контакти.
++
++Научете повече за Ubuntu One на http://one.ubuntu.com/.
++
++Вече имате Ubuntu One регистрация? Добавете вашия компютър към вашата 
++регистрация като стартирате Ubuntu One Control Panel.
++
++Всички контакти в адресната книга на “Ubuntu One” автоматично се синхронизират
++с вашия личен облак. Удобно преглеждайте и променяйте контактите си 
++в Evolution или на уеб сайта на Ubuntu One. Ubuntu One дори автоматично
++ще поддържа вашите Evolution контакти синхронизирани с мобилния ви телефон.
++
++За информация относно копиране или местене на вашите контакти в 
++адресната книга на Ubuntu One, прегледайте нашите онлайн ръководства и FAQs.
++https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++Имате нужда от помощ, или сте открили бъг? Прегледайте опциите за поддръжка на Ubuntu One.
++https://one.ubuntu.com/support/
++
++Благодарим ви.
++
++Екипът на Ubuntu One
++http://one.ubuntu.com/
++
+Index: b/mail/default/bg/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/bg/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/bg/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/ca/Inbox
+===================================================================
+--- a/mail/default/ca/Inbox
++++ b/mail/default/ca/Inbox
+@@ -315,3 +315,54 @@
+ Content-Transfer-Encoding: 8bit
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: L'Equip de l'Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Compagineu la vostra vida digital amb l'Ubuntu One!
++
++L'Evolution és millor amb l'Ubuntu One - el núvol personal que us
++permet compaginar la vostra vida digital.
++
++L'Ubuntu One fa més que sincronitzar els vostres fitxers - ja us calgui
++accedir als vostres contactes, notes o adreces d'interès des de
++qualsevol ordinador o des de la xarxa, gaudir de la vostra música
++preferida des d'una botiga integrada al núvol, o difondre tota la vostra
++col·lecció a l'iPhone o a l'Android - hem elevat el llistó dels núvols
++personals. Podeu obtenir-ne més informació a http://one.ubuntu.com/.
++
++Ja teniu un compte de l'Ubuntu?
++Afegiu el vostre ordinador al vostre compte en iniciar el Tauler de
++control de l'Ubuntu One.
++        
++        Tots els contactes de la llibreta d'adreces «Ubuntu One» se
++sincronitzen automàticament amb el vostre núvol personal. Podeu
++visualitzar i modificar de manera convenient la informació dels
++contactes a l'Evolution o al lloc web de l'Ubuntu One. L'Ubuntu One
++fins i tot mantindrà els vostres contactes de l'Evolution sincronitzats
++amb el vostre telèfon mòbil.
++
++        Per obtenir més informació sobre com copiar o traslladar els
++vostres contactes a la llibreta d'adreces de l'Ubuntu One, consulteu
++els nostres programes d'aprenentatge en línia i les nostres preguntes
++més freqüents (en anglès):
++
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++Si us cal ajuda o bé heu trobat un problema podeu consultar les
++opcions d'assistència de l'Ubuntu One.
++https://one.ubuntu.com/support/
++        
++Moltes gràcies.
++
++L'equip de l'Ubuntu One
++http://one.ubuntu.com/ 
+Index: b/mail/default/cy/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/cy/Inbox
+@@ -0,0 +1,40 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Y Tîm Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Cadwch eich bywyd digidol yn drefnu gydag Ubuntu One!
++
++Nid yn unig y bydd eich dogfennau, lluniau, cerddoriaeth, a nodiadau 
++aros yn sync ar draws pob un o'ch cyfrifiaduron a gyda'ch cloud 
++personol, ond bydd eich holl gysylltiadau Evolution yn ogystal.
++
++Dysgwch fwy am Ubuntu One ar http://one.ubuntu.com/.
++
++Oes cyfrif Ubuntu One'n barod? Ychwanegwch eich cyfrifiadur i'ch cyfrif
++trwy lansio'r Panel Rheoli Ubuntu One.
++
++Mae'r holl gysylltiadau yn y llyfr cyfeiriadau Ubuntu One yn cael eu
++cydamseru'n awtomatig gyda'ch cloud personol. Gweld ac addasu
++gwybodaeth gyswllt yn gyfleus yn Evolution neu'r wefan Ubuntu One.
++Bydd Ubuntu One hyd yn oed yn cydamseru'ch cysylltiadau Evolution i'ch
++ffôn symudol.
++
++Am fwy o wybodaeth am gopïo neu symud eich cysylltiadau i mewn i'r 
++llyfr cyfeiriadau, adolygu ein sesiynau tiwtorial ar-lein a 
++chwestiynau cyffredin.
++https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++Oes angen help neu wedi dod o hyd i “bug”? Adolygu'r opsiynau cefnogi
++Ubuntu One. https://one.ubuntu.com/support/
++
++Diolch yn fawr.
++
++Y Tîm Ubuntu One
++http://one.ubuntu.com/
++
+Index: b/mail/default/cy/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/cy/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/cy/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/de/Inbox
+===================================================================
+--- a/mail/default/de/Inbox
++++ b/mail/default/de/Inbox
+@@ -335,3 +335,53 @@
+ CPAAAjyAAA8gwAMIOL8fcegyqOBdwTkAAAAASUVORK5CYII=
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Das »Ubuntu One«-Team <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Führen Sie Ihr digitales Leben zusammen – mit Ubuntu One!
++
++Evolution ist besser mit Ubuntu One – der persönlichen Cloud, die Ihr
++digitales Leben zusammenhält.
++
++Ubuntu One macht mehr als nur ihre Dateien zu synchronisieren – egal,
++ob Sie von irgendeinem Rechner oder vom Web aus auf Ihre Kontakte,
++Notizen oder Lesezeichen zugreifen wollen, ob Sie aus dem in die
++Cloud integrierten Laden Ihre Lieblingsmusik anhören möchten oder
++ob Sie Ihre gesamte Sammlung auf Ihr iPhone oder Android-Mobiltelefon
++streamen wollen – wir setzen neue Standards bei persönlichen Clouds.
++Erfahren Sie mehr unter http://one.ubuntu.com/.
++        
++Haben sie bereits ein »Ubuntu One«-Konto?
++Dann rufen Sie die »Ubuntu One«-Einstellungen auf und fügen Sie Ihren
++Rechner hinzu.
++        
++	Alle Kontakte im Adressbuch »Ubuntu One« werden automatisch mit
++ihrer persönlichen Cloud synchronisiert. Sie können die Informationen
++zu Ihren Kontakte in Evolution oder auf der »Ubuntu One«-Website bequem
++aufrufen und ändern. Ubuntu One hält sogar Ihre Evolution-Kontakte mit
++Ihrem Mobiltelefon synchron.
++        
++        Für weiterführende Informationen dazu, wie Sie Ihre Kontakte
++ins »Ubuntu One«-Adressbuch kopieren oder verschieben können, lesen Sie
++unsere (englischen) Online-Anleitungen und die Antworten auf gängige
++Fragen (FAQ).
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++Benötigen Sie Hilfe oder haben Sie einen Fehler gefunden? Unter
++https://one.ubuntu.com/support/ finden Sie Unterstützung bei
++Problemen.
++        
++Vielen Dank!
++
++Das »Ubuntu One«-Team
++http://one.ubuntu.com/
+Index: b/mail/default/es/Inbox
+===================================================================
+--- a/mail/default/es/Inbox
++++ b/mail/default/es/Inbox
+@@ -315,3 +315,48 @@
+ Content-Transfer-Encoding: 8bit
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: El equipo de Ubuntu One Team <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Lleve su vida digital con Ubuntu One.
++
++Evolution es mejor con Ubuntu One - la nube personal para su
++vida digital.
++
++Ubuntu One hace más que sincronizar sus archivos - si necesita acceder
++a sus contactos, notas o marcadores desde cualquier equipo o la web, disfrutar
++de su música favorita desde una tienda integrada en la nube o difundir toda
++su colección de iPhone y Android - hemos elevado el listón de las
++nubes personales. Tiene más información en http://one.ubuntu.com/.
++        
++¿Ya tiene una cuenta de Ubuntu One? 
++Añada su equipo a su cuenta, lanzando el panel de control de Ubuntu One. 
++        
++        Todos los contactos de la libreta de direcciones de «Ubuntu One» se sincronizan
++automáticamente con su nube personal. Puede ver y modificar la información de
++contactos en Evolution o el sitio web de Ubuntu One. Ubuntu One mantendrá siempre sus
++contactos de Evolution sincronizados con su teléfono móvil.
++        
++        Para obtener información acerca de copiar o mover sus contactos a la
++libreta de direcciones de Ubuntu One, revise nuestros tutoriales en línea y nuestras
++preguntas más frecuentes (en inglés).
++
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++¿Necesita ayuda o ha encontrado un error? Revise las opciones de soporte de Ubuntu One.
++https://one.ubuntu.com/support/
++        
++Gracias.
++
++El equipo de Ubuntu One
++http://one.ubuntu.com/ 
+Index: b/mail/default/fi/Inbox
+===================================================================
+--- a/mail/default/fi/Inbox
++++ b/mail/default/fi/Inbox
+@@ -329,3 +329,52 @@
+ CPAAAjyAAA8gwAMIOL8fcegyqOBdwTkAAAAASUVORK5CYII=
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Ubuntu One -tiimi <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Hallitse digitaalista elämääsi Ubuntu Onella.
++
++Evolution on parempi kun se varustetaan Ubuntu Onella - 
++henkilökohtaisella pilvipalvelullasi joka mahdollistaa digitaalisen
++elämäsi hallinnan.
++
++Tiedostojesi ajan tasalla pitämisen lisäksi Ubuntu One tekee paljon
++muutankin: saat käyttöösi yhteystietosi, muistiinpanosi ja 
++kirjanmerkkisi miltä tahansa verkkoyhteydellä varustetulta koneelta.
++Voit myös kuunnella lempimusiikkia pilvipalveluun kuuluvasta
++musiikkikaupasta. Myös Android- ja iPhone-puhelimilla voit kuunnella 
++kaikkia henkilökohtaisessa kokoelmassasi olevia musiikkikappaleita.
++Ubuntu One vie pilvipalvelut uudelle tasolle. Lue lisää osoitteesta
++http://one.ubuntu.com/.
++        
++Onko sinulla jo Ubuntu One -tili? 
++Voit lisätä tietokoneesi tiliisi käynnistämällä Ubuntu Onen 
++hallintapaneelin.
++
++Kaikki "Ubuntu One" -osoitekirjassa olevat yhteystiedot synkronoidaan
++automaattisesti henkilökohtaiseen pilveesi. Voit selata ja muokata
++yhteystietoja sekä Evolutionilla että selaimella Ubuntu One
++-verkkosivulla. Ubuntu One pitää yhteystiedot ajan tasalla myös
++matkapuhelimesi kanssa.
++    
++Lisätietoja yhteystietojen kopioimisesta ja siirtämisestä löytyy Ubuntu
++Onen ohjeista ja usein kysytyt kysymykset -osiosta verkkosivuilta        
++https://wiki.ubuntu.com/UbuntuOne/Tutorials/ ja
++https://wiki.ubuntu.com/UbuntuOne/FAQ/
++      
++Tarvitsetko apua tai löysitkö virheen Ubuntu Onesta? Tukipalveluista 
++löyty lisätietoja osoitteesta https://one.ubuntu.com/support/
++        
++Terveisin
++
++Ubuntu One -tiimi
++http://one.ubuntu.com/ 
+Index: b/mail/default/fr/Inbox
+===================================================================
+--- a/mail/default/fr/Inbox
++++ b/mail/default/fr/Inbox
+@@ -281,3 +281,44 @@
+ 
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1--
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: L'équipe Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Organisez vos données numériques avec Ubuntu One !
++
++Non seulement tous vos documents, photos, musiques et notes resteront
++synchronisées avec tous vos ordinateurs et votre « cloud » personnel,
++mais tout vos contacts d'Evolution pourront l'être aussi.
++
++Pour plus d'informations consultez http://one.ubuntu.com/.
++
++Avez-vous déjà un compte Ubuntu One ? Ajoutez votre ordinateur à votre
++compte en utilisant le panneau de configuration Ubuntu One.
++
++Tous les contacts du carnet d'adresses « Ubuntu One » sont automatiquement
++synchronisés avec votre « cloud » personnel. Vous pouvez à votre convenance
++afficher et modifier vos contacts dans Evolution ou sur le site Web Ubuntu 
++One. Ubuntu One peut même synchroniser vos contacts avec votre téléphone 
++portable.
++
++Pour savoir comment copier ou déplacer vos contacts vers le carnet
++d'adresses Ubuntu One, consultez nos tutoriels et notre FAQ :
++https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++Vous avez besoin d'aide ou vous avez remarqué une anomalie ?
++Consultez les options d'assistance :
++https://one.ubuntu.com/support/
++
++Merci de votre confiance.
++L'équipe Ubuntu One
++http://one.ubuntu.com/
+Index: b/mail/default/gl/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/gl/Inbox
+@@ -0,0 +1,45 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: O Equipo de Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Leve a súa vida dixital con Ubuntu One!
++
++Evolution é mellor con Ubuntu One - a nube persoal para a 
++súa vida dixital.
++
++Ubuntu One fai moito máis que sincronizar os seus ficheiros - se
++precisa acceder aos seus contactos, notas ou marcadores desde calquera
++computador ou a web, gozar da súa música favorita desde unha tenda 
++integrada na nube ou difundir toda a súa coleción de iPhone ou 
++Android. Con Ubuntu One elevamos o listón do que significan as
++nubes persoais. Pode obter máis información en http://one.ubuntu.com/.
++
++
++Xa ten unha conta de Ubuntu One? 
++Engada o computador á súa conta, iniciando o Panel de Control 
++de Ubuntu One. 
++        
++        Todos os seus contactos na axenda de enderezos «Ubuntu One» 
++sincronízanse automaticamente coa súa nube persoal. Pode ver 
++e modificar a información dos contactos no Evolution ou na páxina 
++web de Ubuntu One. Ubuntu One manterá sincronizados os seus
++contactos do Evolution co seu teléfono móbil.
++        
++        Para obter máis información sobre como copiar e mover os seus 
++contactos á axenda de enderezos de Ubuntu One, consulte o titorial en 
++liña e as Preguntas Frecuentes (FAQ).
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++Precisa axuda ou encontrou un erro? Vexa as opcións de asistencia 
++técnica para Ubuntu One en https://one.ubuntu.com/support/
++        
++Grazas.
++
++O Equipo de Ubuntu One
++http://one.ubuntu.com/ 
+Index: b/mail/default/gl/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/gl/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/gl/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/gu/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/gu/Inbox
+@@ -0,0 +1,40 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Ubuntu One જૂથ  <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: તમારી Digital જિંદગીને Ubuntu One! સંગાથે લઇ આવો.
++
++ક્રમિક વિકાસ સર્વોત્તમ છે Ubuntu One સાથે - વ્યક્તિગત ક્લાઉડ તમારી Digital જિંદગીને
++સાથે લાવશે.
++
++Ubuntu One તમારી ફાઇલોને સમકાલિક કરવા કરતા પણ અધિક કરે છે - જ્યારે તમારે જરુરી
++સંપર્કનો ઉપયોગની, નોંધો અથવા બુકમાર્કનો કોઇપણ કોમ્પ્યુટરથી કે વેબથી ઉપયોગ કરવો છે, એક
++ક્લાઉડમાં એકીકૃત દુકાનમાંથી કે સ્ટ્રીમથી તમારા મનગમતા સંગીતોનો આનંદ માણો કે તમારા પૂર્ણ
++સન્ગ્રહને iPhone કે Android મોબાઇલફોન્સ પર લો - અમે વ્યક્તિગત ક્લાઉડસ માટે આગડ
++આવ્યા છે. અહી વધુ જાણો http://one.ubuntu.com/.
++
++પહેલાથી Ubuntu One નુ ખાતું છે?
++Ubuntu One નિયંત્રણ પૅનલ ચાલુકરીને તમારુ કોમ્ય્પુટર તમારા ખાતામં ઉમેરો.
++
++        “Ubuntu One” સરનામું પુસ્તકમાના બધા સંપર્કો આપોઆપ તમારા વ્યક્તિગત ક્લાઉડ
++સાથે સમકાલિક થઇજાય છે. Evolution કે Ubuntu One વેબસાઇટમાં સંપર્કોની માહિતી સુલભરીતે
++જોઇ અને ફેરફાર કરીસકાય છે. Ubuntu One તમારા Evolution ના સંપર્કો તમારા મોબાઇલફોન
++સાથે સમકાલિક પણ રાખે છે.
++
++        તમારા સંપર્કોને નકલ કે ગતિમાન Ubuntu One સરનામું પુસ્તકમાં કરવામ માટેની માહિતી,
++અમારા ઓનલાઇન ટ્યૂટૉરિઅલ અને પૂછ્યા જતા સવાલોની સમીક્ષા કરવી.
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++મદદની આવશ્યકતા છે અથવા ખામી મળીછે? Ubuntu One આધારના વિકલ્પોની સમીક્ષા કરવી.
++https://one.ubuntu.com/support/
++
++આભાર.
++
++Ubuntu One જૂથ
++http://one.ubuntu.com/ 
+Index: b/mail/default/gu/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/gu/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/gu/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/he/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/he/Inbox
+@@ -0,0 +1,39 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: צוות Ubuntu One‏ <ubuntuone-support@canonical.com‏>
++To:‏ ubuntuone-support@canonical.com
++Subject: אחדו את החיים הדיגיטליים שלכם באמצעות Ubuntu One‏!
++
++Evolution פועלת טוב יותר עם Ubuntu One - העננה הפרטית שמאחדת את החיים הדיגיטליים שלכם.
++
++Ubuntu One עושה מעבר לסנכרון הקבצים שלכם - בין אם אתם צריכים לגשת לאנשי הקשר,
++להערות או לסימניות שלכם מכל מחשב שהוא או דרך האינטרנט, ליהנות מהמוזיקה המועדפת
++עליכם מחנות המשולבת בעננה או להזרים את כל האוסף שלכם לטלפונים ניידים מסוג iPhone 
++או Android - הרמנו את הרף לעננות הפרטיות.
++ תוכלו ללמוד עוד בכתובת http://one.ubuntu.com/‎‏.
++        
++כבר יש לכם חשבון ב־Ubuntu One?‏
++הוסיפו את המחשב שלכם לחשבון שלכם על ידי טעינת לוח הבקרה של Ubuntu One‏.
++        
++        כל אנשי הקשר בספר הכתובות שלכם ב־”Ubuntu One“ מסונכרנים אוטומטית
++עם העננה הפרטית שלכם. תוכלו לצפות ולשנות פרטי אנשי קשר דרך Evolution או דרך
++האתר של Ubuntu One בפשטות. Ubuntu One אפילו תדאג לסנכרן את אנשי הקשר שלכם
++עם הטלפון הסלולרי שלכם.
++        
++        למידע על העתקה או העברה של אנשי הקשר שלך אל ספר הכתובות של
++Ubuntu One תוכלו לעיין במדריכים ובמקבץ השאלות בכתובות הבאות:
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/‎
++        
++זקוקים לעזרה או שאיתרתם תקלה? עיינו באפשרויות התמיכה של Ubuntu One.‏
++https://one.ubuntu.com/support/‎
++        
++תודה לכם.
++
++צוות Ubuntu One
++http://one.ubuntu.com/ 
+Index: b/mail/default/he/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/he/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/he/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/hr/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/hr/Inbox
+@@ -0,0 +1,45 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Ubuntu One tim <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Objedinite svoj digitalni život s Ubuntu Oneom!
++
++Evolution je bolji s Ubuntu Oneom - osobnim oblakom koji
++objedinjuje Vaš digitalni život.
++
++Ubuntu One čini mnogo više od same sinkronizacije vaših datoteka - 
++
++pristupajte svojim kontaktima, bilješkama ili zabilješkama s bilo kojeg
++računala ili putem weba, uživajte u svojoj omiljenoj glazbi na vašem
++oblaku, koji je povezan s glazbenom trgovinom, ili preslušavajte cijelu
++glazbenu kolekciju izravno na vašem iPhone ili Android mobilnom telefonu 
++- podigli smo letvicu osobnih oblaka. Saznajte više na 
++http://one.ubuntu.com/.
++        
++Već imate Ubuntu One korisnički račun? 
++Spojite svoje računalo s korisničkim računom pokretanjem Ubuntu One 
++kontrolne ploče. 
++        
++        Svi kontakti u “Ubuntu One” adresaru se automatski sinkroniziraju 
++s vašim osobnim oblakom. Jednostavno pregledavajte i ažurirajte informacije 
++u Evolutionu ili na Ubuntu One web stranici. Ubuntu One će se čak brinuti 
++o sinkronizaciji Evolution kontakata s vašim mobilnim telefonom.
++        
++        Za više informacija o kopiranju ili premještanju kontakata u Ubuntu 
++One adresar, posjetite naše online vodiče i učestalo postavljena pitanja.
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++Trebate li pomoć ili ste pronašli grešku? Pogledajte mogućnosti Ubuntu One 
++podrške.
++https://one.ubuntu.com/support/
++        
++Hvala vam.
++
++Ubuntu One tim
++http://one.ubuntu.com/ 
+Index: b/mail/default/hr/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/hr/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/hr/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/hu/Inbox
+===================================================================
+--- a/mail/default/hu/Inbox
++++ b/mail/default/hu/Inbox
+@@ -312,3 +312,42 @@
+ Content-Transfer-Encoding: 8bit
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Az Ubuntu One csapat <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Rendszerezze digitális életét az Ubuntu One segítségével!
++
++Nem csak dokumentumai, fotói, zenéi és jegyzetei maradnak szinkronban
++számítógépei között és személyes adatfelhőjében, de minden Evolution névjegye is.
++
++Tudjon meg többet az Ubuntu Oneról a http://one.ubuntu.com/ oldalon.
++
++Már van Ubuntu One fiókja? Adja hozzá számítógépét a fiókjához 
++az Ubuntu One vezérlőpult elindításával.
++
++Az „Ubuntu One” címjegyzék minden névjegye automatikusan szinkronizálásra
++kerül személyes adatfelhőjével. A névjegy-információkat kényelmesen megjelenítheti
++és módosíthatja az Evolutionben, vagy az Ubuntu One webhelyen. Az Ubuntu One az 
++Evolution névjegyeket még mobiltelefonjával is szinkronban fogja tartani.
++
++A névjegyek Ubuntu One címjegyzékbe másolásával vagy mozgatásával kapcsolatban
++nézze meg online ismertetőnket és a GyIK-et.
++https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++Segítségre van szüksége, vagy hibát talált? Nézze meg az Ubuntu One támogatási lehetőségeket.
++https://one.ubuntu.com/support/
++
++Köszönettel.
++
++Az Ubuntu One csapat
++http://one.ubuntu.com/
+Index: b/mail/default/id/Inbox
+===================================================================
+--- a/mail/default/id/Inbox
++++ b/mail/default/id/Inbox
+@@ -314,3 +314,49 @@
+ Content-Transfer-Encoding: 8bit
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Tim Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Satukan kehidupan digital Anda bersama Ubuntu One!
++
++Evolution jadi lebih baik dengan Ubuntu One - cloud pribadi yang
++menyatukan kehidupan digital Anda.
++
++Ubuntu One melakukan lebih dari sekedar menyelaraskan berkas Anda -
++apakah Anda perlu mengakses kontak, catatan, atau penanda alamat Anda
++dari sebarang komputer atau web, menikmati musik favorit Anda dari 
++toko yang terpadu dalam cloud, atau mengalirkan seluruh koleksi Anda
++ke telepon genggam iPhone atau Android - kami telah meningkatkan 
++standar layanan pada cloud pribadi. Pelajari lebih lanjut di 
++http://one.ubuntu.com/.
++        
++Sudah punya akun Ubuntu One?
++Tambahkan komputer Anda ke akun Anda dengan meluncurkan Panel Kendali
++Ubuntu One.
++        
++        Semua kontak di buku alamat "Ubuntu One" otomatis diselaraskan
++dengan cloud pribadi Anda. Tilik dan ubah informasi kontak dengan nyaman
++di Evolution atau situs web Ubuntu One. Ubuntu One bahkan akan menjaga
++keselarasan kontak Evolution Anda dengan telepon genggam Anda.
++        
++        Untuk informasi tentang menyalin atau memindahkan kontak Anda
++ke dalam buku alamat Ubuntu One, periksa tutorial daring dan FAQ kami.
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++Perlu bantuan atau menemukan suatu kutu? Periksa opsi dukungan Ubuntu
++One. https://one.ubuntu.com/support/
++        
++Terima kasih.
++
++Tim Ubuntu One
++http://one.ubuntu.com/ 
+Index: b/mail/default/it/Inbox
+===================================================================
+--- a/mail/default/it/Inbox
++++ b/mail/default/it/Inbox
+@@ -323,3 +323,51 @@
+ Content-Transfer-Encoding: 8bit
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Il team di Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Porta la tua vita digitale sempre con te, con Ubuntu One!
++
++Evolution e Ubuntu One per un'accoppiata vincente: il tuo cloud
++personale per la tua vita digitale.
++
++Ubuntu One è in grado di fare molto più di sincronizzare i tuoi file.
++Se hai necessità di accedere ai tuoi contatti, alle tue note o ai tuoi
++segnalibri da un qualsiasi computer o dal Web, ascoltare la tua musica
++preferita dal negozio integrato con il tuo cloud o in streaming sul tuo 
++smartphone iPhone o Android, Ubuntu One è in grado di farlo.
++Scopri tutte le novità sul nostro sito: http://one.ubuntu.com/.
++
++Hai già un account Ubuntu One?
++Collegalo al tuo computer avviando il pannello di controllo di Ubuntu One.
++
++        Tutti i contatti presenti nella rubrica «Ubuntu One» verranno 
++sincronizzati automaticamente col tuo cloud e potrai visualizzarli o 
++modificarli usando Evolution o direttamente sul sito web di Ubuntu One. 
++E non dovrai più copiarli sul tuo smartphone: Ubuntu One li sincronizza 
++per te.
++
++        Per maggiori informazioni su come copiare o spostare i tuoi 
++contatti all'interno della rubrica di Ubuntu One, consulta la nostra 
++documentazione:
++
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++Hai bisogno di aiuto o hai riscontrato un problema? Consulta la nostra 
++offerta di supporto utente:        
++https://one.ubuntu.com/support/
++        
++Grazie.
++
++Il team di Ubuntu One
++http://one.ubuntu.com/ 
+Index: b/mail/default/ja/Inbox
+===================================================================
+--- a/mail/default/ja/Inbox
++++ b/mail/default/ja/Inbox
+@@ -351,3 +351,48 @@
+ CPAAAjyAAA8gwAMIOL8fcegyqOBdwTkAAAAASUVORK5CYII=
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: The Ubuntu One チーム <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: デジタルライフをUbuntu Oneにまとめませんか？
++
++デジタルライフを一つにまとめるパーソナルクラウドであるUbuntu Oneと
++共に使うと、Evolutionはより一層便利になります。
++
++Ubuntu Oneはただファイルを同期するだけではありません。すべてのコンピュータ
++からアドレス帳やメモ、ブックマークにアクセスしたり、ウェブにアクセスして
++クラウドストレージに保存したお気に入りの音楽を楽しんだり、iPhoneやAndroidなどの
++携帯電話にすべてのコレクションをストリーム送信することだってできます。
++つまり、我々はパーソナルクラウドの品質を引き上げたのです。
++詳しいことは http://one.ubuntu.com/ で知ることができます。
++
++すでにUbuntu Oneのアカウントはお持ちですか？ Ubuntu Oneコントロールパネルを
++起動して、あなたのアカウントにコンピュータを追加してください。
++
++“Ubuntu One”アドレス帳にあるすべての連絡先（contacts）は、あなたのパーソナ
++ルクラウドに自動的に同期されます。便利なことに、EvolutionとUbuntu Oneウェブ
++サイト上のどちらでも、連絡先情報の表示や修正ができるのです。さらに
++Ubuntu OneはEvolutionの連絡先を携帯電話と同期することもできます。
++
++Ubuntu Oneアドレス帳に、連絡先をコピーしたり移動するための情報は、
++オンラインのチュートリアルとFAQを確認してください。
++https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++助けが必要であったり、バグを見つた場合は、Ubuntu Oneのサポートオプションを
++確認してください。
++https://one.ubuntu.com/support/
++
++Thank you.
++
++The Ubuntu One チーム
++http://one.ubuntu.com/
+Index: b/mail/default/Makefile.am
+===================================================================
+--- a/mail/default/Makefile.am
++++ b/mail/default/Makefile.am
+@@ -1,5 +1,5 @@
+ 
+-SUBDIRS=C ca cs zh_CN de es fi fr hu id it ja ko lt mk nl pl pt ro sr sr@latin sv
++SUBDIRS=C af ast bg ca cs cy zh_CN de es fi fr gl gu he hr hu id it ja ko lt mk nb nl pl pt pt_BR pt_PT ro ru sk sl sr sr@latin sv ug zh_TW
+ 
+ 
+ 
+Index: b/mail/default/nb/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/nb/Inbox
+@@ -0,0 +1,43 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Ubuntu One-laget <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Få orden på ditt digitale liv med Ubuntu One!
++
++Evolution er bedre med Ubuntu One - din personlige sky som får orden
++på ditt digitale liv.
++
++Ubuntu One gjør mer enn å bare synkronisere filer - om du ønsker å få
++fatt i kontaktene, notatene eller bokmerkene dine fra hvilken som helst
++maskin eller fra veven, nyte favorittmusikken din fra en butikk
++integrert i skyen eller overføre hele musikksamlingen din til iPhone-
++eller Android-telefoner - vi har tatt steget videre innen personlige
++skyer. Lær mer på http://one.ubuntu.com/.
++
++Har du en Ubuntu One-konto allerede?    
++Åpne innstillingene for Ubuntu One og legg til maskinen din på kontoen.
++        
++        Alle kontaktene i Ubuntu One-adresseboka blir automatisk
++synkronisert med din personlige sky. Du kan enkelt se på og endre
++kontaktinformasjon i Evolution eller på Ubuntu One-nettstedet. 
++Ubuntu One vil til og med holde kontaktene i Evolution synkronisert med 
++mobiltelefonen din.
++
++        For informasjon om hvordan du kopierer eller flytter kontaktene
++dine til Ubuntu One-adresseboka, se:
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++Trenger du hjelp eller har du funnet noen feil? Se støttesidene til
++Ubuntu one. https://one.ubuntu.com/support/    
++        
++Takk for oppmerksomheten.
++
++Ubuntu One-laget
++http://one.ubuntu.com/ 
++
+Index: b/mail/default/nb/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/nb/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/nb/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/nl/Inbox
+===================================================================
+--- a/mail/default/nl/Inbox
++++ b/mail/default/nl/Inbox
+@@ -316,3 +316,53 @@
+ Content-Transfer-Encoding: 8bit
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Het Ubuntu One Team <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Breng uw digitale leven samen met Ubuntu One!
++
++Evolution werkt beter met Ubuntu One - de persoonlijke cloud waarmee u
++uw digitale leven samenbrengt.
++
++Ubuntu One kan meer dan alleen uw bestanden synchroniseren - of u nu op
++elke computer bij uw contactpersonen, notities of bladwijzers wilt 
++kunnen, van uw favoriete muziek wilt genieten via een in de cloud
++geïntegreerde winkel of uw volledige collectie naar uw iPhone of
++Android telefoon wilt streamen - wij hebben de lat voor persoonlijke
++clouds hoger gelegd. Leer meer op http://one.ubuntu.com/ (Engelstalig).
++
++
++Heeft u al een Ubuntu One-account?
++Voeg een computer aan uw account toe door het Ubuntu One Controlepaneel
++te starten.
++        
++        Alle contactpersonen in het "Ubuntu One" adresboek worden
++automatisch met uw persoonlijke cloud gesynchroniseerd. U kunt de
++gegevens van uw contactpersonen eenvoudig bekijken en wijzigen via
++Evolution of de Ubuntu One-website. Ubuntu One kan zelfs uw Evolution
++contactpersonen met uw mobiele telefoon synchroniseren.
++        
++        Voor informatie over het kopiëren of verplaatsen van uw contact-
++personen naar het Ubuntu One adresboek kunt u online de Engelstalige
++handleiding en FAQ lezen.
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++Heeft u hulp nodig of een bug gevonden? Zie dan de Engelstalige Ubuntu
++One support-mogelijkheden.
++https://one.ubuntu.com/support/
++
++
++Bedankt.
++
++Het Ubuntu One Team
++http://one.ubuntu.com/ 
+Index: b/mail/default/pt_BR/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/pt_BR/Inbox
+@@ -0,0 +1,40 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Time do Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Traga a sua vida digital junto com o Ubuntu One!
++
++O Evolution é melhor com o Ubuntu One - a nuvem pessoal que traz a
++sua vida digital juntos.
++
++Ubuntu One faz mais do que sincronizar seus arquivos - se você precisa
++acessar seus contatos ou favoritos em qualquer computador na internet, desfrutar
++de sua música favorita armazenada na nuvem ou stream para celulares iPhone e
++Android - elevamos os padrões de nuvens pessoal.
++Aprenda mais em http://one.ubuntu.com/
++
++Já tem uma conta no Ubuntu One?
++Adicione o seu computador em sua conta executando o painel de controle do Ubuntu One.
++
++        Todos os contatos  do livro de endereços no “Ubuntu One” são automaticamente
++sincronizadas com sua nuvem pessoal. Ver e modificar contatos convenientemente e
++informações no Evolution ou na página do Ubuntu One. Ubuntu One irá manter os contatos
++do Evolution em sincronia com o seu celular.
++
++        Para informações sobre como copiar ou mover seus contatos no livro de endereço
++do Ubuntu One, revise nosso tutorial on-linue e FAQs.
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++Precisa de ajuda ou encontrou um erro? Veja as opções de suporte do Ubuntu One.
++https://one.ubuntu.com/support/
++
++Obrigado.
++
++Time do Ubuntu One
++http://one.ubuntu.com/
+Index: b/mail/default/pt_BR/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/pt_BR/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/pt_BR/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/pt_PT/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/pt_PT/Inbox
+@@ -0,0 +1,32 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Equipa do Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Reúna a sua vida digital com Ubuntu One!
++
++Evolution é melhor com Ubuntu One - a núvem pessoal que reúne a sua vida digital.
++
++Ubuntu One faz mais do que sincronizar os seus ficheiros - aceda aos seus contactos, notas ou marcadores, onde precisar, em qualquer computador ou na web, desfrute da sua música preferida numa loja integrada na nuvem ou oiça a sua colecção preferida no seu iPhone ou telemóvel Android em tempo real - Nós subimos a fasquia no que toca a nuvens pessoais. Saiba mais em http://one.ubuntu.com/.
++        
++Já tem uma conta pessoal no Ubuntu One? 
++Adicione o seu computador à sua conta abrindo o Painel de Controle do Ubuntu One. 
++        
++        Todo o seu livro de contactos do “Ubuntu One” é automaticamente sincronizado na sua nuvem pessoal. Ver e modificar os contactos no Evolution ou no sítio web do Ubuntu One. O Ubuntu One manterá sincronizados os seus contactos do Evolution com o seu telemóvel.
++Manter os seus contactos do Evolution sincronizados com o seu telemóvel.
++        
++        Para informações sobre como copiar ou mover os seus contactos para o livro de contactos do Ubuntu One, veja os nossos tutoriais e FAQs em: 
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++Precisa de ajuda ou encontrou um bug? Veja as opções para suporte do Ubuntu One em:
++https://one.ubuntu.com/support/
++        
++Muito Obrigado.
++
++A Equipa do Ubuntu One
++http://one.ubuntu.com/ 
+Index: b/mail/default/pt_PT/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/pt_PT/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/pt_PT/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/ru/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/ru/Inbox
+@@ -0,0 +1,32 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Команда Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Наслаждайтеcь цифровой жизнью вместе с Ubuntu One!
++
++Дополнительные возможности Evolution вместе с Ubuntu One - персональным «облачным» сервисом.
++
++Ubuntu One - не просто синхронизация ваших файлов, это доступ к своей адресной книге, заметкам или закладкам с любого компьютера в сети. Захотелось послушать музыку во встроенном музыкальном магазине, либо скинуть свою музыкальную коллекцию на iPhone или телефон на ОС Android? Всё это вы можете сделать с помощью своего персонального «облака». Узнайте больше на http://one.ubuntu.com/.
++        
++У вас уже есть учётная запись Ubuntu One? 
++Просто добавьте свой компьютер к учётной записи, запустив панель управления Ubuntu One. 
++        
++Все контакты из адресной книги «Ubuntu One» автоматически синхронизируются с вашим персональным «облаком». Удобный просмотр и редактирование информации о контактах в Evolution или на сайте Ubuntu One. Кроме того, Ubuntu One может синхронизировать контакты Evolution с адресной книгой вашего мобильного телефона.
++        
++Для получения подробной информации о том, как скопировать или переместить свои контакты в адресную книгу 
++Ubuntu One, обратитесь к интернет-руководствам и ЧаВо.
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++Нужна помощь? Нашли ошибку? Обратитесь к странице поддержки Ubuntu One.
++https://one.ubuntu.com/support/
++        
++Спасибо.
++
++Команда Ubuntu One
++http://one.ubuntu.com/ 
+Index: b/mail/default/ru/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/ru/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/ru/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/sk/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/sk/Inbox
+@@ -0,0 +1,37 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Tím Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Udržujte váš digitálny život zorgranizovaný pomocou Ubuntu One!
++
++Nielen, že vaše dokumenty, fotky, hudba a poznámky budú synchronizované
++medzi všetkými vašimi počítačmi a vaším osobným cloudom, ale tiež aj všetky
++vaše kontakty programu Evolution.
++
++Viac sa o Ubuntu One dozviete na http://one.ubuntu.com/.
++
++Máte už Ubuntu One účet? Pridajte váš počítač do vášho účtu spustením
++ovládacieho panelu Ubuntu One.
++
++Všetky kontakty v adresári kontaktov „Ubuntu One“ sú automaticky synchronizované
++s vaším osobným cloudom. S ľahkosťou si prezerajte a upravujte vaše kontakty
++v programe Evolution alebo na stránke Ubuntu One. Ubuntu One
++dokonca synchronizuje vaše kontakty z programu Evolution s vaším mobilným telefónom.
++
++Pre informácie o kopírovaní alebo presúvaní kontaktov do adresára kontaktov
++Ubuntu One, pozrite naše internetové návody a často kladené otázky.
++https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++Potrebujute pomoc alebo ste našli chybu? Prejdite si možnosti podpory Ubuntu One.
++https://one.ubuntu.com/support/
++
++Ďakujeme.
++
++Tím Ubuntu One
++http://one.ubuntu.com/
+Index: b/mail/default/sk/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/sk/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/sk/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/sl/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/sl/Inbox
+@@ -0,0 +1,31 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Ekipa Ubuntu One <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Poenotite svoje digitalno življenje z Ubuntu One!
++
++    Program Evolution je boljši z Ubuntu One - osebnim oblakom, ki poenoti vaše digitalno življenje.
++
++    Ubuntu One naredi več kot samo uskladi vaše datoteke. Kadarkoli lahko dostopate do svojih stikov, zapiskov ali zaznamkom s kateregakoli računalnika na spletu. V svoji najljubši glasbi lahko uživate preko v oblak vključene trgovine ter svojo celotno glasbeno zbirko pretakate na prenosne telefone iPhone ali Android. S svojo ponudbo smo zvišali standarde, ki veljajo za osebne oblake. Preberite si več o tem na http://one.ubuntu.com/.
++        
++    Račun Ubuntu One že imate? 
++Zaženite nadzorni pult Ubuntu One in v njem dodajte svoj računalnik vašemu računu.
++        
++    Vsi stiki v imeniku “Ubuntu One” se samodejno usklajujejo z vašim osebnim oblakom. Prikladno si jih lahko ogledate ali uredite v programu Evolution ali na spletišču Ubuntu One. V njem je celo poskrbljeno za usklajevanje stikov iz programa Evolution z imenikom na vašem prenosnem telefonu.
++        
++    Podrobnosti o kopiranju ali premikanju stikov v imenik Ubuntu One si oglejte v naših spletnih vodnikih in pogosto zastavljenih vprašanjih.
++    https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++    https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++    Potrebujete pomoč ali pa ste našli napako v programu? Oglejte si možnosti podpore za Ubuntu One.
++https://one.ubuntu.com/support/
++        
++Hvala vam.
++
++Ekipa Ubuntu One
++http://one.ubuntu.com/ 
+Index: b/mail/default/sl/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/sl/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/sl/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/sv/Inbox
+===================================================================
+--- a/mail/default/sv/Inbox
++++ b/mail/default/sv/Inbox
+@@ -309,3 +309,50 @@
+ Content-Transfer-Encoding: 8bit
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Ubuntu One Team <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: Organisera ditt digitala liv med Ubuntu One!
++
++Evolution är bättre med Ubuntu One - det personliga molnet som
++organiserar ditt digitala liv.
++
++Ubuntu One gör mer än att bara synkronisera dina filer - oavsett om du
++behöver åtkomst till dina kontakter, anteckningar eller bokmärken från
++någon dator eller via webben, njuta av din favoritmusik från en moln-
++integrerad affär eller strömma hela din samling till iPhone och Android-
++mobiltelefoner - vi har höjt ribban för personliga moln. 
++Läs mer på http://one.ubuntu.com/.
++        
++Har du redan ett Ubuntu One-konto? 
++Lägg till din dator till ditt konto genom att starta kontrollpanelen
++för Ubuntu One. 
++        
++        Alla kontakter i “Ubuntu One”-adressboken synkroniseras auto-
++matiskt med ditt personliga moln. Visa och ändra kontaktinformation på
++ett smidigt sätt eller på Ubuntu Ones webbplats. Ubuntu One kan till
++och med synkronisera dina Evolution-kontakter med din mobiltelefon.
++        
++        För information om kopiering eller förflyttning av dina 
++kontakter till Ubuntu One-adressboken så kan du se vår handledning och
++frågesida.
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++Behöver du hjälp eller har du hittat ett programfel? Se support-
++alternativen för Ubuntu One.
++https://one.ubuntu.com/support/
++        
++Tack.
++
++The Ubuntu One Team
++http://one.ubuntu.com/
+Index: b/mail/default/ug/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/ug/Inbox
+@@ -0,0 +1,35 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Ubuntu One ئەترىتى <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: رەقەملىك ھاياتىڭىزنى Ubuntu One بىلەن بىرلەشتۈرۈڭ
++
++Evolution رەقەملىك تۇرمۇشىڭىزنى بىرلەشتۈرگۈچى شەخسى قاپچۇق -- Ubuntu One بىلەن تېخىمۇ قۇلايلىق.
++
++Ubuntu One ھۆججەتلىرىڭىزنى رەتلەپلا قالماستىن ئۇ ئارقىلىق يەنە ھەرقانداق ۋاقىتتا ئالاقە ئۇچۇرلىرىڭىز، ئەسلەتمىلىرىڭىز ياكى خەتكۈچلىرىڭىزنى ھەرقانداق بىر كومپيۇتېر ياكى توردا كۆرەلەيسىز، قاپچۇققا بىرلەشتۈرگەن مۇزىكا ئامبىرىڭىزدا ئامراق ناخشىلىرىڭىزدىن ھۇزۇرلىنالايسىز ياكى پۈتۈن مۇزىكا توپلىمىڭىزنى iPhone ياكى Android يانفونىدا ئاڭلىيالايسىز. تېخىمۇ كۆپ مەزمۇن بۇ ئادرېستا:
++
++http://one.ubuntu.com/
++
++Ubuntu One ئابونتىغا تىزىملىتىپ بولدىڭىزمۇ؟
++ئۇنداقتا كومپيۇتېرىڭىزنى Ubuntu One كونترول تاختىسىدا ئابونتىڭىزغا قوشۇڭ.
++
++«Ubuntu One»  ئادرېس دەپتىرىڭىزدىكى بارلىق ئالاقە ئۇچۇرلىرى شەخسى قاپچۇقىڭىزدىكى ئۇچۇرلار بىلەن ئاپتوماتىك يېڭىلىنىپ تۇرىدۇ. Evolution ياكى Ubuntu One تور بىتى ئارقىلىق ئالاقە ئۇچۇرلىرىڭىزنى ئاسانلا كۆرەلەيسىز ھەم ئۆزگەرتەلەيسىز. Ubuntu One يەنە سىزنىڭ Evolution دىكى ئالاقە ئۇچۇرلىرىڭىزنى يانفونىڭىزدىكى ئۇچۇرلار بىلەن ماسلاشتۇرۇپ تۇرىدۇ.
++
++ئالاقە ئۇچۇرلىرىڭىزنى Ubuntu One دىكى ئادرېس دەپتىرىڭىزگە كۆچۈرۈش، يۆتكەش ھەققىدە بىلمەكچى بولسىڭىز، توردىكى كۆرسەتمىلەرگە ۋە سوئال-جاۋابلارغا قاراڭ، ئادرېسى:
++
++https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++https://wiki.ubuntu.com/UbuntuOne/FAQ/
++
++ياردەم لازىم بولسا ياكى خاتالىق مەلۇم قىلماقچى بولسىڭىز Ubuntu One قوللاش بېتىدىكى تاللاشلارغا قاراڭ:
++
++https://one.ubuntu.com/support/
++
++رەھمەت سىزگە.
++Ubuntu One ئەترىتى
++
++http://one.ubuntu.com/ 
+Index: b/mail/default/ug/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/ug/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/ug/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk
+Index: b/mail/default/zh_CN/Inbox
+===================================================================
+--- a/mail/default/zh_CN/Inbox
++++ b/mail/default/zh_CN/Inbox
+@@ -314,3 +314,49 @@
+ CPAAAjyAAA8gwAMIOL8fcegyqOBdwTkAAAAASUVORK5CYII=
+ 
+ --=-t4dRE6cqcdSBHOrMdTQ1
++
++
++
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Ubuntu One 团队 <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: 与 Ubuntu One 共享您的数字生活！
++
++自从有了 Ubuntu One，Evolution 变得更加出色了 - 私人云服务将您的数字生活整合在一
++起。
++
++Ubuntu One 除了能够同步您的文件外，还可以做得更多 - 无论您是希望从任何电脑或者网络访问
++您的联系人、笔记或者是书签，还是希望享受从云商店中获取的音乐，亦或者是将这些全部收藏导入到您的
++iPhone 和 Android 移动电话中 - 我们在私人云服务上更上一层楼。要了解详情，请访问
++http://one.ubuntu.com/。
++
++已经拥有了一个 Ubuntu One 账号？
++启用 Ubuntu One 控制面板来将这台电脑添加到您的账户中去吧。        
++ 
++        
++        所有在 “Ubuntu One“ 地址簿中的联系人都会自动同步到您的私人
++云。您可以在 Evolution 或者 Ubuntu One 网站上方便的游览或者修改您的联系人
++信息。Ubuntu One 甚至可以让您移动电话的联系人与 Evolution 联系人之间保持同
++步。
++
++        
++        更多关于将您的联系人复制或者移动到 Ubuntu One 地址簿中的
++信息，请参阅我们的网上指南和 FAQ。
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++需要帮助或者找到了一个错误？请查看 Ubuntu One 支持选项。
++https://one.ubuntu.com/support/
++
++        
++此致
++  敬礼
++
++Ubuntu One 团队
++http://one.ubuntu.com/ 
+Index: b/mail/default/zh_TW/Inbox
+===================================================================
+--- /dev/null
++++ b/mail/default/zh_TW/Inbox
+@@ -0,0 +1,38 @@
++From ubuntuone-support@canonical.com Wed Aug 11 19:19:59 2010
++Return-Path: <ubuntuone-support@canonical.com>
++X-Original-To: ubuntuone-support@mail.canonical.com
++Delivered-To: ubuntuone-support@mail.canonical.com
++Date: Wed, 11 Aug 2010 13:07:23 -0500
++Message-ID: <1281550043.4672.22.camel@ubuntu>
++X-Mailer: Evolution 2.30.2
++From: Ubuntu One 團隊 <ubuntuone-support@canonical.com>
++To: ubuntuone-support@canonical.com
++Subject: 透過 Ubuntu One 將您的數位生活統整在一起！
++
++Evolution 有了 Ubuntu One 變得更好用 - 您的私有雲能將您的數位生活統整在一起。
++
++Ubuntu One 不只是同步您的檔案 - 不管您是需要從任何電腦或透過網路存取聯絡人資料、筆記、
++書籤，或是要從整合雲端技術的商店聆聽您喜愛的音樂，或是要將您的整個收藏傳送至 iPhone 或 
++Android 手機都可以 - 我們在私有雲的應用上領先群倫。若要深入瞭解，請見 
++http://one.ubuntu.com/ 。
++        
++已經擁有 Ubuntu One 帳號了嗎？
++只要啟動 Ubuntu One 控制面板就能將您的電腦加入帳號中。
++        
++        所有「Ubuntu One」通訊錄內的聯絡人都會自動與您的私有雲同步。您可以在 
++Evolution 內或 Ubuntu One 網站上檢視、修改聯絡人資訊，十分便利。Ubuntu One 甚至
++能將您 Evolution 內的聯絡人資料與您的手機同步。
++        
++        若要瞭解如何將您的聯絡人資料複製或移動至 Ubuntu One 通訊錄的方法，請見我
++們的線上教學與常見問答集。
++        https://wiki.ubuntu.com/UbuntuOne/Tutorials/
++        https://wiki.ubuntu.com/UbuntuOne/FAQ/
++        
++如果需要幫助或是發現程式錯誤，請查看 Ubuntu One 的支援選項。
++https://one.ubuntu.com/support/
++        
++感謝您。
++
++Ubuntu One 團隊 敬啟
++http://one.ubuntu.com/ 
++
+Index: b/mail/default/zh_TW/Makefile.am
+===================================================================
+--- /dev/null
++++ b/mail/default/zh_TW/Makefile.am
+@@ -0,0 +1,8 @@
++
++defaultlocaldir = $(privdatadir)/default/zh_TW/mail/local
++
++defaultlocal_DATA = Inbox
++
++EXTRA_DIST = $(defaultlocal_DATA)
++
++-include $(top_srcdir)/git.mk

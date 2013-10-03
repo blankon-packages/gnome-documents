@@ -1,0 +1,25 @@
+=== modified file 'data/evolution.desktop.in.in'
+Index: b/data/evolution.desktop.in.in
+===================================================================
+--- a/data/evolution.desktop.in.in
++++ b/data/evolution.desktop.in.in
+@@ -17,3 +17,19 @@
+ X-GNOME-Bugzilla-OtherBinaries=evolution-addressbook-factory;evolution-calendar-factory;evolution-source-registry;evolution-user-prompter;
+ X-GNOME-UsesNotifications=true
+ MimeType=text/calendar;text/x-vcard;text/directory;application/mbox;message/rfc822;x-scheme-handler/mailto;
++X-Ayatana-Desktop-Shortcuts=Compose;Contacts;Calendar
++
++[Compose Shortcut Group]
++_Name=Compose New Message
++Exec=evolution mailto:
++TargetEnvironment=Messaging Menu;Unity
++
++[Contacts Shortcut Group]
++_Name=Contacts
++Exec=evolution -c contacts
++TargetEnvironment=Messaging Menu;Unity
++
++[Calendar Shortcut Group]
++_Name=Calendar
++Exec=evolution -c calendar
++TargetEnvironment=Unity

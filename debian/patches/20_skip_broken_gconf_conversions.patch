@@ -1,0 +1,53 @@
+Description: Skip gconf conversions which aren't useful and cause gsd to segfault
+Forwarded: no
+
+Index: b/data/evolution.convert
+===================================================================
+--- a/data/evolution.convert
++++ b/data/evolution.convert
+@@ -17,13 +17,6 @@
+ statusbar-visible = /apps/evolution/shell/view_defaults/statusbar_visible
+ toolbar-visible = /apps/evolution/shell/view_defaults/toolbar_visible
+ 
+-[org.gnome.evolution.window:/org/gnome/evolution/mail/shell/window]
+-height = /apps/evolution/shell/view_defaults/window_height
+-maximized = /apps/evolution/shell/view_defaults/window_maximized
+-width = /apps/evolution/shell/view_defaults/window_width
+-x = /apps/evolution/shell/view_defaults/window_x
+-y = /apps/evolution/shell/view_defaults/window_y
+-
+ [org.gnome.evolution.addressbook]
+ address-formatting = /apps/evolution/addressbook/display/address_formatting
+ completion-minimum-query-length = /apps/evolution/addressbook/completion/minimum_query_length
+@@ -202,31 +195,6 @@
+ variable-width-font = /apps/evolution/mail/display/fonts/variable
+ vertical-view-fonts = /apps/evolution/mail/display/vertical_view_fonts
+ 
+-[org.gnome.evolution.window:/org/gnome/evolution/mail/browser-window/]
+-height = /apps/evolution/mail/mail_browser_height
+-maximized = /apps/evolution/mail/mail_browser_maximized
+-width = /apps/evolution/mail/mail_browser_width
+-
+-[org.gnome.evolution.window:/org/gnome/evolution/mail/filter-window]
+-height = /apps/evolution/mail/filter_editor_height
+-maximized = /apps/evolution/mail/filter_editor_maximized
+-width = /apps/evolution/mail/filter_editor_width
+-
+-[org.gnome.evolution.window:/org/gnome/evolution/mail/send-recv-window]
+-height = /apps/evolution/mail/send_recv_height
+-maximized = /apps/evolution/mail/send_recv_maximized
+-width = /apps/evolution/mail/send_recv_width
+-
+-[org.gnome.evolution.window:/org/gnome/evolution/mail/subscription-window]
+-height = /apps/evolution/mail/subscription_editor_height
+-maximized = /apps/evolution/mail/subscription_editor_maximized
+-width = /apps/evolution/mail/subscription_editor_width
+-
+-[org.gnome.evolution.window:/org/gnome/evolution/mail/vfolder-window]
+-height = /apps/evolution/mail/vfolder_editor_height
+-maximized = /apps/evolution/mail/vfolder_editor_maximized
+-width = /apps/evolution/mail/vfolder_editor_width
+-
+ [org.gnome.evolution.bogofilter]
+ utf8-for-spam-filter = /apps/evolution/mail/junk/bogofilter/unicode
+ 
