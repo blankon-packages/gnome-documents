@@ -1,7 +1,7 @@
 evolution (3.10.0-0blankon2) suroboyo; urgency=low
 
   * remove debian/control linux-any
-  * drop evolution-data-server (<< 3.9)
+  * drop debian/control evolution-data-server-dev (<< 3.9)
 
  -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Thu, 03 Oct 2013 20:26:59 +0700
 
