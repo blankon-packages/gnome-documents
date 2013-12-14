@@ -11,6 +11,7 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-version.mk
 
 ELIBDIR := usr/lib/evolution/3.8
 
+DEB_DH_AUTORECONF_ARGS := --as-needed
 DEB_SHLIBDEPS_INCLUDE := debian/evolution/$(ELIBDIR)
 DEB_DH_MAKESHLIBS_ARGS_libevolution += -V'libevolution (>= $(DEB_GNOME_VERSION)), libevolution (<< $(DEB_GNOME_NEXTVERSION))' --noscripts -X $(ELIBDIR)/modules
 DEB_DH_MAKESHLIBS_ARGS_evolution += -V
@@ -34,11 +35,8 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 	--enable-python \
 	--disable-contact-maps \
 	--disable-image-inline \
-	--enable-goa \
 	--with-clutter \
-	--with-sub-version=-$(DEB_REVISION) \
-	--disable-bogofilter \
-	--disable-text-highlight
+	--with-sub-version=-$(DEB_REVISION)
 
 ifneq ($(DEB_HOST_ARCH_OS), linux)
 	DEB_CONFIGURE_EXTRA_FLAGS+=--disable-nm

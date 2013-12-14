@@ -1,3 +1,10 @@
+evolution (3.10.2-0blankon3) suroboyo; urgency=low
+
+  * Merge Whit Debian
+  * Drop Build-depends : evolution-dev
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 15 Dec 2013 06:29:07 +0700
+
 evolution (3.10.2-0blankon2) suroboyo; urgency=low
 
   * Build-depends : evolution-dev 
@@ -9,6 +16,29 @@ evolution (3.10.2-0blankon1) suroboyo; urgency=low
   * New upstream release
 
  -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Sun, 17 Nov 2013 14:29:30 +0700
+
+evolution (3.10.1-2) experimental; urgency=low
+
+  [ Yves-Alexis Perez ]
+  * Team upload.
+  * Remove myself from uploaders, this should have been done a long time
+    ago.
+
+  [ Sjoerd Simons ]
+  * Build against G3.10 gnome-desktop
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed, 06 Nov 2013 21:45:40 +0100
+
+evolution (3.10.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Refresh patches.
+  * Update build dependencies as per configure.ac.
+  * Drop --enable-goa. This has been moved entirely to EDS.
+  * Install appdata files in -common.
+  * Unlist mark-as-read plugin from install: it's been merged into the core.
+
+ -- Jordi Mallach <jordi@debian.org>  Sun, 20 Oct 2013 11:21:23 +0200
 
 evolution (3.10.1-0blankon1) suroboyo; urgency=low
 
