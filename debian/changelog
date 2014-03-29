@@ -1,3 +1,25 @@
+evolution (3.12.0-1blankon1) tambora; urgency=low
+
+  * New upstream releases
+
+ -- Syai Mif <syai.unipdu@gmail.com>  Sat, 29 Mar 2014 12:13:27 +0700
+
+evolution (3.12.0-1) experimental; urgency=medium
+
+  * Team upload.
+
+  * New upstream release.
+  * debian/patches/10_revert_libevolution_avoid-version.patch:
+    + Refreshed.
+  * debian/control:
+    + Update build dependencies.
+    + Update evolution-data-server{,-dev} requirements for the new major
+      version.
+    + Build against gnome-desktop 3.8 in preparation for an upload to
+      unstable.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Fri, 28 Mar 2014 13:28:04 +0100
+
 evolution (3.10.3-0blankon1) suroboyo; urgency=low
 
   * New upstream release
