@@ -1,0 +1,11 @@
+Description: Show GNOME Documents in menus everywhere
+Author: Jeremy Bicha <jbicha@ubuntu.com>
+--- a/data/org.gnome.Documents.desktop.in
++++ b/data/org.gnome.Documents.desktop.in
+@@ -7,6 +7,5 @@
+ Type=Application
+ StartupNotify=true
+ DBusActivatable=true
+-OnlyShowIn=GNOME;
+ Categories=GNOME;GTK;Utility;Core;
+ _Keywords=Docs;PDF;Document;

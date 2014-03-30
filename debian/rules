@@ -1,51 +1,29 @@
 #!/usr/bin/make -f
+-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
-include /usr/share/cdbs/1/rules/autoreconf.mk
-include /usr/share/cdbs/1/rules/buildvars.mk
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/autotools.mk
-include /usr/share/cdbs/1/class/gnome.mk
-include /usr/share/cdbs/1/rules/utils.mk
-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
-include /usr/share/gnome-pkg-tools/1/rules/gnome-version.mk
+export DEB_LDFLAGS_MAINT_APPEND= -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 
-ELIBDIR := usr/lib/evolution/3.12
+%:
+	dh $@ --parallel --with autoreconf,gnome,gir
 
-DEB_DH_AUTORECONF_ARGS := --as-needed
-DEB_SHLIBDEPS_INCLUDE := debian/evolution/$(ELIBDIR)
-DEB_DH_MAKESHLIBS_ARGS_libevolution += -V'libevolution (>= $(DEB_GNOME_VERSION)), libevolution (<< $(DEB_GNOME_NEXTVERSION))' --noscripts -X $(ELIBDIR)/modules
-DEB_DH_MAKESHLIBS_ARGS_evolution += -V
-DEB_DH_MAKESHLIBS_ARGS_ALL += --noscripts -X $(ELIBDIR)/plugins
-DEB_DH_INSTALL_ARGS := --fail-missing -X.la
+override_dh_autoreconf:
+	dh_autoreconf --as-needed
 
-export DEB_LDFLAGS_MAINT_APPEND=-Wl,-z,defs -Wl,--as-needed -Wl,-O1
-export DEB_BUILD_MAINT_OPTIONS=hardening=+all
-include /usr/share/dpkg/buildflags.mk
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		--disable-silent-rules \
+		--enable-getting-started
 
-DEB_REVISION := $(shell echo $(DEB_VERSION) | awk -F- '{ print $$NF }')
+override_dh_install:
+	# Since dh_install -X.la isn't working...
+	find -name *.la -delete
+	dh_install -X.la
 
-DEB_CONFIGURE_EXTRA_FLAGS += \
-	--with-openldap \
-	--enable-nls \
-	--with-krb5=/usr \
-	--sysconfdir=/etc \
-	--libexecdir=/usr/lib \
-	--enable-plugins=all \
-	--enable-pst-import \
-	--enable-python \
-	--disable-contact-maps \
-	--disable-image-inline \
-	--with-clutter \
-	--with-sub-version=-$(DEB_REVISION)
+override_dh_makeshlibs:
+	dh_makeshlibs -X/usr/lib/$(DEB_HOST_MULTIARCH)/gnome-documents
 
-ifneq ($(DEB_HOST_ARCH_OS), linux)
-	DEB_CONFIGURE_EXTRA_FLAGS+=--disable-nm
-else
-	DEB_CONFIGURE_EXTRA_FLAGS+=--enable-nm
-endif
+override_dh_girepository:
+	dh_girepository -X/usr/lib/$(DEB_HOST_MULTIARCH)/gnome-documents \
+	-ldebian/gnome-documents/usr/share/gnome-documents/gir-1.0 \
+	/usr/lib/$(DEB_HOST_MULTIARCH)/gnome-documents/ /usr/lib/$(DEB_HOST_MULTIARCH)/gnome-documents/girepository-1.0/
 
-clean::
-	debconf-updatepo
-	find -name '*.schemas' | xargs rm -f
-
-common-binary-post-install-arch:: list-missing
