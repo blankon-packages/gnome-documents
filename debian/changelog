@@ -1,8 +1,94 @@
-gnome-documents (3.12.0-1blankon1) tambora; urgency=low
+gnome-documents (3.16.0-0blankon1) tambora; urgency=medium
 
-  * New upstream releases
+  * New upstream release
+  * Import from PPA GNOME3-TEAM
 
- -- Syai Mif <syai.unipdu@gmail.com>  Sun, 30 Mar 2014 11:35:31 +0700
+ -- Mahyuddin <yudi.al@gmail.com>  Sun, 31 May 2015 20:55:09 +0700
+
+gnome-documents (3.16.0-0ubuntu1~vivid1) vivid; urgency=medium
+
+  * New upstream release
+  * Bump Build-dep on libgtk-3-dev (>= 3.15.5)
+
+ -- Tim Lunn <tim@feathertop.org>  Thu, 26 Mar 2015 09:52:40 +1100
+
+gnome-documents (3.15.2-0ubuntu1~vivid1) vivid; urgency=medium
+
+  * New upstream release
+  * Switch to webkit2gtk
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Mon, 02 Feb 2015 06:40:03 +1100
+
+gnome-documents (3.14.2-1ubuntu1) vivid; urgency=medium
+
+  * Merge with debian, remaining change:
+    - Add build-depend on librsvg-dev 
+
+ -- Tim Lunn <tim@feathertop.org>  Sun, 21 Dec 2014 08:33:53 +1100
+
+gnome-documents (3.14.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+    + Disable SSLv3 because of POODLE.
+
+ -- Josselin Mouette <joss@debian.org>  Tue, 02 Dec 2014 00:19:11 +0100
+
+gnome-documents (3.14.1-1) unstable; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream release
+
+  [ Michael Biebl ]
+  * Refresh gnome-documents-xdg-fail.patch.
+  * Bump Standards-Version to 3.9.6. No further changes.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 20 Oct 2014 20:24:02 +0200
+
+gnome-documents (3.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump build-dependencies according to configure.ac changes:
+    + libevince-dev (>= 3.13.3)
+    + libglib2.0-dev (>= 2.39.3)
+    + libgtk-3-dev (>= 3.13.2)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 25 Sep 2014 19:06:28 +0200
+
+gnome-documents (3.12.1-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 15 Jul 2014 00:12:14 +0200
+
+gnome-documents (3.12.1-1ubuntu3) utopic; urgency=medium
+
+  * No change rebuild for gnome-desktop 3.12
+
+ -- Tim Lunn <tim@feathertop.org>  Tue, 23 Sep 2014 08:24:52 +1000
+
+gnome-documents (3.12.1-1ubuntu2) utopic; urgency=medium
+
+  * No-change rebuild against libgdata19
+
+ -- Iain Lane <iain.lane@canonical.com>  Tue, 15 Jul 2014 12:42:33 +0100
+
+gnome-documents (3.12.1-1ubuntu1) utopic; urgency=medium
+
+  * Merge from debian. Remaining changes:
+    - Relax build-dep on gnome-desktop
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Thu, 19 Jun 2014 06:12:13 +1000
+
+gnome-documents (3.12.1-1) experimental; urgency=medium
+
+  * Bump libgjs-dev to (>= 1.40) to build against experimental gjs.
+  * Add dependency on gnome-online-miners (Closes: #747563)
+  * New upstream release.
+  * Add debian/patches/gnome-documents-xdg-fail.patch
+    - avoid crashing when not all XDG User Special directories
+      are set up properly.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 17 May 2014 10:01:17 +0200
 
 gnome-documents (3.12.0-1) experimental; urgency=medium
 
@@ -26,14 +112,67 @@ gnome-documents (3.12.0-1) experimental; urgency=medium
 
  -- Andreas Henriksson <andreas@fatal.se>  Tue, 25 Mar 2014 21:13:03 +0100
 
-gnome-documents (3.10.0-0blankon1) suroboyo; urgency=low
+gnome-documents (3.10.2-0ubuntu2) utopic; urgency=medium
 
+  * Rebuild for tracker 1.0
+    - debian/patches: add git_switch_tracker_1.0.patch,
+        git_replace_tracker_miner.patch
+    - debian/control.in:
+      + switch to libtracker-control-1.0-dev, 
+      + bump libtracker-sparql-1.0-dev
+      + bump gir1.2-tracker-1.0
+ 
+
+ -- Tim Lunn <tim@feathertop.org>  Tue, 13 May 2014 19:49:44 +1000
+
+gnome-documents (3.10.2-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release.
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Thu, 27 Mar 2014 18:17:12 +1100
+
+gnome-documents (3.10.1-0ubuntu2) trusty; urgency=medium
+
+  * debian/control.in: Add depend on gnome-online-miners 
+
+ -- Tim Lunn <tim@feathertop.org>  Mon, 10 Mar 2014 07:59:14 +1100
+
+gnome-documents (3.10.1-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release
+  * debian/patches/git_remove_e4x_00*.patch: remove usage of E4X
+    in preparation for js24
+
+ -- Tim Lunn <tim@feathertop.org>  Tue, 11 Feb 2014 16:39:19 +1100
+
+gnome-documents (3.10.0-1ubuntu2) trusty; urgency=low
+
+  * debian/rules: use dh --with gir, to fix missing gir depends.
+
+ -- Tim Lunn <tim@feathertop.org>  Sat, 21 Dec 2013 11:14:45 +1100
+
+gnome-documents (3.10.0-1ubuntu1~trusty2) trusty; urgency=medium
+
+  * Copied from Debian experimental
+  * debian/control.in
+    - Relax build-dep on gnome-desktop 
+
+ -- Tim Lunn <tim@feathertop.org>  Wed, 18 Dec 2013 17:58:41 +1100
+
+gnome-documents (3.10.0-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * Use dh7 style rules instead of cdbs
+  * Bump dh compat to 9
   * debian/control.in:
-    - Add build-depend on gnome-online-miners
-    - Bump build-depend on glib, gtk and tracker
-  * debian/patches/02-no-gettext.patch: Dropped include in new version 
+    - Build-depend on desktop-file-utils
 
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 27 Sep 2013 09:52:11 +0700
+  [ Sjoerd Simons ]
+  * New upstream release (3.10.0)
+  * debian/patches/02-no-gettext.patch:
+    + Dropped, merged upstream
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed, 06 Nov 2013 21:50:43 +0100
 
 gnome-documents (3.8.4-1) unstable; urgency=low
 

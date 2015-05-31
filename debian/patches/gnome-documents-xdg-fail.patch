@@ -1,0 +1,30 @@
+From: Andreas Henriksson <andreas@fatal.se>
+Subject: gnome-documents: avoid crashing when xdg user dirs is not available
+
+On initial startup gnome-documents loops over (XDG) User Special Directories and crashes if
+the call to get the full paths returns null, eg:
+
+org.gnome.Documents[1585]: (gnome-documents:1975): Gjs-WARNING **: JS ERROR: Error: Argument 'path' (type utf8) may not be null
+org.gnome.Documents[1585]: Source<._getTrackerLocations/<@/usr/share/gnome-documents/js/search.js:334
+org.gnome.Documents[1585]: Source<._getTrackerLocations@/usr/share/gnome-documents/js/search.js:325
+
+On second attempt to start, gnome-documents starts but is not functional....
+
+This patch catches non-existant XDG User Special dirs and just ignores them.
+
+Index: gnome-documents-3.14.1/src/search.js
+===================================================================
+--- gnome-documents-3.14.1.orig/src/search.js	2014-10-20 20:17:39.522696614 +0200
++++ gnome-documents-3.14.1/src/search.js	2014-10-20 20:17:39.518696672 +0200
+@@ -340,7 +340,10 @@
+ 
+                 // also ignore XDG locations if they are present with their full path
+                 for (let idx = 0; idx < GLib.UserDirectory.N_DIRECTORIES; idx++) {
+-                    let file = Gio.file_new_for_path(GLib.get_user_special_dir(idx));
++                    let path = GLib.get_user_special_dir(idx);
++                    if (path == null)
++                        continue;
++                    let file = Gio.file_new_for_path(path);
+                     if (trackerFile.equal(file))
+                         return;
+                 }
